@@ -11,6 +11,7 @@
     <!-- ready to use :D💖 -->
 
     <form action="">
+        <p class="submit-error-on-top"></p>
         <div class="two-columns">
             <div class="input-text-first-name input">
                 <input type="text" placeholder="first name">
@@ -32,18 +33,18 @@
             <p id="" class="error-message hidden"></p>
             
             <div class="input-text-password input">
-                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Password" onchange="passwordLength()">
                 <img src="./images/icons/bxs-lock.png" alt="lock icon">
                 <p class="password-error-message hidden"></p>
             </div>
-            <div class="input-text-password input">
-                <input type="password" placeholder="Password check">
+            <div class="input-text-password input password-check">
+                <input type="password" placeholder="Password check" onchange="passwordMatching()">
                 <img src="./images/icons/bxs-lock.png" alt="lock icon">
                 <p class="password-error-message hidden"></p>
             </div>
             <p id="" class="error-message hidden"></p>
     
-            <button>Submit</button>
+            <button class="signup-button" onclick="signupSubmitButton(event)">Submit</button>
         </form>
 
     <script src="script.js"></script>
