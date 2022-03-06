@@ -104,84 +104,78 @@ function logcheck(){
         <script src="script.js"></script>`
     }else if (userData.where ==="signup"){
         document.body.innerHTML=`
-        <form action="">
-        <p class="submit-error-on-top"></p>
-        <div class="two-columns">
-            <div class="input-text-first-name input">
-                <input type="text" placeholder="first name">
-                <img src="./images/icons/bxs-user-detail.png" alt="">
-                <p class="password-error-message hidden"></p>
-
-            </div>
-            <div class="input-text-last-name input">
-                <input type="text" placeholder="last name">
-                <img src="./images/icons/bxs-user-detail.png" alt="">
-                <p class="password-error-message hidden"></p>
-            </div>
-        </div>
     
+        <div class="container">
+        
+        <div class="container-inner">
+            <p class="account">don't Have an account? <a href="signup.html" class="link" onclick="">Sign up</a></p>
+            
+            <h1>Welcome to AOP</h1>
+            <p>a wounder land to track your Business growth</p>
+
+            <form action="">
+                <p class="loginerror"></p>
+                <div class="input-text-email input">
+                    <input type="email" placeholder="email" class="loging-email">
+                </div>
+                <p id="" class="error-message hidden"></p>
+                
+                <div class="input-text-password input">
+                    <input type="password" placeholder="Password" class="login-password">
+                    <p class="password-error-message hidden"></p>
+                </div>
+                <p id="" class="error-message hidden"></p>
+
+                <button onclick="loginButton(event)">Submit</button>
+            </form>
+            
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+
+
+
+
+        `
+    }else if (userData.where ==="login"){
+        document.body.innerHTML = `
+            
+    <div class="container">
+        
+    <div class="container-inner">
+        <p class="account">don't Have an account? <a href="signup.html" class="link" onclick="">Sign up</a></p>
+        
+        <h1>Welcome to AOP</h1>
+        <p>a wounder land to track your Business growth</p>
+
+        <form action="">
+            <p class="loginerror"></p>
             <div class="input-text-email input">
-                <input type="email" placeholder="email">
-                <img src="./images/icons/bx-mail-send.png" alt="">
+                <input type="email" placeholder="email" class="loging-email">
             </div>
             <p id="" class="error-message hidden"></p>
             
             <div class="input-text-password input">
-                <input type="password" placeholder="Password" onchange="passwordMatching()">
-                <img src="./images/icons/bxs-lock.png" alt="lock icon">
-                <p class="password-error-message hidden"></p>
-            </div>
-            <div class="input-text-password input password-check">
-                <input type="password" placeholder="Password check" onchange="passwordLength()">
-                <img src="./images/icons/bxs-lock.png" alt="lock icon">
+                <input type="password" placeholder="Password" class="login-password">
                 <p class="password-error-message hidden"></p>
             </div>
             <p id="" class="error-message hidden"></p>
-    
-            <button class="signup-button" onclick="signupSubmitButton(event)">Submit</button>
+
+            <button onclick="loginButton(event)">Submit</button>
         </form>
-
-    <script src="script.js"></script>`
-    }else if (userData.where ==="login"){
-        document.body.innerHTML = `
-        <div class="container">
-        <div class="left">
-            <div class="top-account">
-                <p class="account">don't Have an account? <a href="signup.html" class="link" onclick="">Sign up</a></p>
-            </div>
-
-            <div class="centered">
-                <h1>Welcome to AOP</h1>
-                <p>Placing assured be if removed it besides on. Far shed each high read</p>
-    
-                <form action="">
-                    <div class="input-text-email input">
-                        <input type="email" placeholder="email">
-                        <img src="./images/icons/bx-mail-send.png" alt="">
-                    </div>
-                    <p id="" class="error-message hidden"></p>
-                    
-                    <div class="input-text-password input">
-                        <input type="password" placeholder="Password">
-                        <img src="./images/icons/bxs-lock.png" alt="lock icon">
-                        <p class="password-error-message hidden"></p>
-                    </div>
-                    <p id="" class="error-message hidden"></p>
-    
-                    <button>Submit</button>
-                </form>
-                <p class="cant">Can't login <a href="#" class="link">Change Password</a></p>
-            </div>
-        </div>
-        <div class="right">
-            <img class="double-check" src="./images/icons/bx-check-double.png" alt="Double Check icon">
-            <h2>Track Your <span class="green">Business</span></h2>
-            <img src="./images/Business-help.png" alt="Business background">
-            <h2 class="h2-bottom">With a <span class="underline">Click.</span></h2>
-        </div>
+        
     </div>
 
-    <script src="script.js"></script>`
+</div>
+
+<script src="script.js"></script>
+    
+    
+    
+    `
     }
 }
 function logout(){
