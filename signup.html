@@ -8,9 +8,58 @@
     <title>APO Business</title>
 </head>
 <body>
-    <!-- ready to use :D💖 -->
+    <style>
+        
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 90%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:hsl(243, 57%, 50%) ;
+}
+h1{
+    margin-bottom: 0;
+}
+.container{
+    width: 90%;
+    height: 100%;
+    max-width: 600px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:hsl(243, 50%, 55%) ;
+    border-radius: 15px;
+}
+button{
+    border: 0;
+    padding: .5em 1.5em;
+    color: hsl(243, 57%, 50%);
+    font-weight: 700;
+    background-color: hsl(64, 100%, 55%);
+    border-radius: 5px;
+    transition: transform 200ms;
+    cursor: pointer;
+}
+button:hover,
+button:focus{
+    background-color: hsl(243, 57%, 50%);
+    border: 1px solid hsl(64, 100%, 55%);
+    color: hsl(64, 100%, 55%);
+    transform: scale(1.1);
 
+}
+    </style>
+    <!-- ready to use :D💖 -->
+    <div class="container">
     <form action="">
+        <p class="submit-error-on-top"></p>
         <div class="two-columns">
             <div class="input-text-first-name input">
                 <input type="text" placeholder="first name">
@@ -32,20 +81,20 @@
             <p id="" class="error-message hidden"></p>
             
             <div class="input-text-password input">
-                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Password" onchange="passwordLength()">
                 <img src="./images/icons/bxs-lock.png" alt="lock icon">
                 <p class="password-error-message hidden"></p>
             </div>
-            <div class="input-text-password input">
-                <input type="password" placeholder="Password check">
+            <div class="input-text-password input password-check">
+                <input type="password" placeholder="Password check" onchange="passwordMatching()">
                 <img src="./images/icons/bxs-lock.png" alt="lock icon">
                 <p class="password-error-message hidden"></p>
             </div>
             <p id="" class="error-message hidden"></p>
     
-            <button>Submit</button>
+            <button class="signup-button" onclick="signupSubmitButton(event)">Submit</button>
         </form>
-
+</div>
     <script src="script.js"></script>
 </body>
 </html>
