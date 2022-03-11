@@ -8,35 +8,38 @@
     <title>APO Business sign-in</title>
 </head>
 <body>
-    
     <div class="container">
         
         <div class="container-inner">
-            <p class="account">don't Have an account? <a href="signup.html" class="link" onclick="">Sign up</a></p>
             
+            <p class="account">Don't Have an account? <a href="signup.html" class="link" onclick="">Sign up</a></p>
             <h1>Welcome to AOP</h1>
-            <p>a wounder land to track your Business growth</p>
+            <p>A wounder land to track your Business growth</p>
 
             <form action="">
                 <p class="loginerror"></p>
-                <div class="input-text-email input">
-                    <input type="email" placeholder="email" class="loging-email">
+                <div class="input-text-email input" id="input">
+                    <input type="email" placeholder="Email" class="loging-email">
+                    <img src="./images/icons/bx-mail-send.png" alt="">
                 </div>
-                <p id="" class="error-message hidden"></p>
-                
+                <p id="" class="error-message hidden error"></p>
                 <div class="input-text-password input">
                     <input type="password" placeholder="Password" class="login-password">
-                    <p class="password-error-message hidden"></p>
+                    <img src="./images/icons/bxs-lock.png" alt="">
+                    <p class="password-error-message hidden error"></p>
                 </div>
-                <p id="" class="error-message hidden"></p>
-
+                <p id="" class="error-message hidden error"></p> <!-- why do we have to error place holder here -->
                 <button onclick="loginButton(event)">Submit</button>
             </form>
-           
+        </div>
+
+        <div class="right-side">
+            <img class="double-check" src="./images/icons/bx-check-double.png" alt="">
+            <h2>Track Your <span>Business</span></h2>
+            <img src="./images/Business-help.png" alt="">
+            <h2>With a <a href="">Click.</a> </h2>
         </div>
 
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

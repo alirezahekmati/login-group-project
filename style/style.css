@@ -1,46 +1,314 @@
-
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    transition: 0.3s ease;
 }
-body{
-    width: 90%;
-    min-height: 90vh;
+
+:root {
+    --main-background: #ECEFF7;
+    --main-gradient: linear-gradient(180deg, #470EA4 0%, #3D45E2 100%);
+    --text-blue: #476ED3;
+    --button-input-blue: #1F28EB;
+    --super-light-dark: #999999;
+    --light-dark: #6F6F6F;
+    --dark: #212121;
+    --green: #00F2B8;
+    --error-color: #ff3333;
+}
+
+html {
+    font-size: 10px; /* 10px = 1rem and 16px = 1.6rem  */
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--main-background);
+    min-height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:hsl(243, 57%, 50%) ;
 }
-h1{
-    margin-bottom: 0;
+
+.container {
+    width: 850px;
+    height: 569px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.25);
 }
-.container{
-    width: 90%;
+
+.container-inner {
+    width: 60%;
+    padding: 4rem 6rem;
+}
+
+.container-inner .account {
+    font-size: 1.6rem;
+    color: var(--super-light-dark);
+    margin-bottom: 7.4rem;
+}
+
+.container-inner .account a {
+    color: var(--button-input-blue);
+}
+
+.container-inner h1 {
+    font-size: 3.6rem;
+    color: var(--dark);
+    line-height: 54px;
+    font-weight: 500;
+}
+
+.container-inner > p {
+    font-size: 1.4rem;
+    color: var(--super-light-dark);
+    margin-bottom: 2.7rem;
+}
+
+.container-inner form .input {
+    border: 1px solid var(--dark);
+    width: 85%;
+    height: 42.54px;
+    border-radius: 6px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.container-inner form input {
+    width: 100%;
     height: 100%;
-    max-width: 600px;
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color:hsl(243, 50%, 55%) ;
-    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 1rem 5rem 1rem 2rem;
+    color: var(--light-dark);
+    font-size: 1.8rem;
 }
-button{
-    border: 0;
-    padding: .5em 1.5em;
-    color: hsl(243, 57%, 50%);
+
+.container-inner form .input:hover {
+    border-color: var(--button-input-blue);
+}
+
+.container-inner form .input img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+
+.container-inner form .input .password-error-message {
+    color: var(--error-color);
+}
+
+.container-inner form button {
+    font-size: 1.6rem;
+    width: 85%;
+    height: 42px;
+    color: white;
+    background-color: var(--button-input-blue);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.container-inner form button:hover {
+    background-color: var(--text-blue);
+}
+
+/* right side of the page */ 
+
+.right-side {
+    width: 40%;
+    border-radius: 0 20px 20px 0;
+    background: var(--main-gradient);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-side .double-check {
+    align-self: start;
+}
+
+.right-side h2 {
+    font-size: 3.6rem;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    line-height: 117.5%;
+    letter-spacing: -0.005em;
+}
+
+.right-side h2 span {
+    color: var(--green);
+}
+
+.right-side a {
+    color: white;
+}
+
+
+/* sign-up page */
+
+.container.signup .account {
+    margin-bottom: 3.1rem;
+}
+
+.container.signup h1 {
+    margin-bottom: 1.9rem;
+}
+
+.container.signup .two-columns {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container.signup .two-columns .input {
+    width: 47%;
+}
+
+/* .container.signup .two-columns .input:nth-child(2) {
+    margin-right: auto;
+} */
+
+.error {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    color: var(--error-color);
+}
+
+/* logout */
+
+.container.dashboard {
+    display: initial;
+}
+
+.container.dashboard nav {
+    border-radius: 20px 20px 0 0;
+    height: 7rem;
+    padding: 0 4rem;
+    background-color: #470EA4;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    filter: drop-shadow(0px 18px 11px rgba(31, 31, 31, 0.07));
+}
+
+.container.dashboard .left-sidenav, .user {
+    display: flex;
+    align-items: center;
+}
+
+.container.dashboard .left-sidenav h1 {
     font-weight: 700;
-    background-color: hsl(64, 100%, 55%);
-    border-radius: 5px;
-    transition: transform 200ms;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0.14em;
+    margin-right: 11rem;
+    user-select: none;
     cursor: pointer;
 }
-button:hover,
-button:focus{
-    background-color: hsl(243, 57%, 50%);
-    border: 1px solid hsl(64, 100%, 55%);
-    color: hsl(64, 100%, 55%);
-    transform: scale(1.1);
 
+.container.dashboard .left-sidenav p {
+    font-size: 21px;
+    line-height: 32px;
+}
+
+.container.dashboard .user h2{
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+}
+
+.container .side-nav-content {
+    display: flex;
+    width: 100%;
+    max-height: 500px;
+    position: relative;
+}
+
+.container .side-nav-content::after {
+    content: '';
+    position: absolute;
+    height: 30%;
+    width: 75%;
+    bottom: 0;
+    right: 0;
+    /* background-color: red; */
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0.35) 100%);
+    z-index: 10;
+}
+
+.container.dashboard .side-nav {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 25%;
+    padding: 2rem;
+    background: var(--main-gradient);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container.dashboard .side-nav .item {
+    margin-bottom: 1.5rem;
+}
+
+.container.dashboard .side-nav .logout {
+    margin-top: 25rem;
+}
+
+.container.dashboard .side-nav a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+    display: block;
+}
+
+.container.dashboard .side-nav a:hover {
+    color: var(--green);
+}
+
+.container.dashboard .side-nav a.active {
+    color: var(--green);
+}
+
+.container.dashboard .content {
+    width: 75%;
+    padding: 2rem;
+    overflow-y: scroll;
+}
+
+.container.dashboard .content h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 1.3rem;
+}
+
+.container.dashboard .content .flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.container.dashboard .content .flex-wrapper div {
+    width: 177px;
+    height: 130px;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: var(--super-light-dark);
 }
